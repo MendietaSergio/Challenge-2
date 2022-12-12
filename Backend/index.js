@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var http = require('http');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', apiRouter);
-
+mongoose.set('strictQuery', false);
 mongoose.connect(process.env.DB_MONGO, {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -55,7 +54,7 @@ app.use(function (err, req, res, next) {
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3000;
-app.listen(port, host, () =>{
+app.listen(port, host, () => {
   "Servidor funcionando"
 });
 module.exports = app;
