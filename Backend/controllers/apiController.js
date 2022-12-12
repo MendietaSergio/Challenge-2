@@ -4,10 +4,8 @@ module.exports = {
     List: async (req, res) => {
         try {
             const question = await List.find()
-            return res.json({
-                ok: true,
-                question
-            })
+            console.log(question);
+            return res.json(question)
         } catch (error) {
             console.log(error);
             return res.status(error.statusCode || 500).json({
