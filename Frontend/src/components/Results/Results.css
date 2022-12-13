@@ -1,0 +1,19 @@
+.container-svg-results {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    color          : green;
+    flex-direction : column;
+}
+
+.number_result {
+    font-size: 80px;
+    color    : #45C486;
+    padding  : 20px 0;
+}
+
+.container_title_result {
+    color      : rgba(25, 29, 99, 1);
+    font-weight: bold;
+    margin: 20px 0;
+}
