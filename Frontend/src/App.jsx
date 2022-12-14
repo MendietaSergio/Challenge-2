@@ -1,5 +1,6 @@
 import { Questions } from "./components/Questions/Questions"
 import { Results } from "./components/Results/Results"
+import { Searching } from "./components/Searching/Searching"
 
 function App() {
 
@@ -9,8 +10,9 @@ function App() {
 
       <div className='body-card'>
         <div className='container-info'>
-          <Questions />
+          {/* <Questions /> */}
           {/* <Results /> */}
+          <Searching />
         </div>
       </div>
     </div>

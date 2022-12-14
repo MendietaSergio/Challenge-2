@@ -8,13 +8,18 @@
 }
 
 .container-info {
-    height        : 100%;
-    padding       : 10px;
-    flex-direction: column;
+    height         : 100%;
+    padding        : 10px;
+    flex-direction : column;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
 }
-.container-questions{
+
+.container-questions {
     padding: 70px;
 }
+
 .number-questions {
     color  : #45C486;
     padding: 0 40px;
@@ -87,9 +92,11 @@
     border          : 0;
     border-radius   : 8px;
 }
-.btn-reset{
+
+.btn-reset {
     background-color: #45C486 !important;
 }
+
 .btn-next:hover {
     cursor             : pointer;
     /* ponerlo cuando seleccione uno, sino que no se active */
