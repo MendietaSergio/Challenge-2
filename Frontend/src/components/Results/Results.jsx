@@ -2,7 +2,10 @@ import React from 'react'
 import { Button } from '../Button/Button'
 import './Results.css'
 
-export const Results = () => {
+export const Results = ({
+    point,
+    reset
+}) => {
     return (
         <div className='container-svg-results'>
             <svg width="274" height="274" viewBox="0 0 274 274" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,12 +22,17 @@ export const Results = () => {
             </svg>
             <div>
 
-                <h1 className='number_result'>37%</h1>
+                <h1 className='number_result'>{Math.ceil(((point * 100) / 3))}%</h1>
             </div>
             <div className='container_title_result'>
                 <span>Respuestas correctas</span>
             </div>
-            <Button className={"btn-reset"} text="VOLVER A JUGAR"/>
+            <Button
+                btn_reset={true}
+                reset={reset}
+                className={"btn-reset"}
+                text="VOLVER A JUGAR"
+            />
         </div>
 
     )

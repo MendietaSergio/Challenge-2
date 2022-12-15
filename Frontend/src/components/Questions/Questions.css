@@ -25,6 +25,10 @@
     padding: 0 40px;
 }
 
+.container-question {
+    padding: 12px 40px 0 40px;
+}
+
 .questions {
     color         : #191D63;
     font-family   : Roboto;
@@ -33,12 +37,10 @@
     line-height   : 30px;
     letter-spacing: 0em;
     text-align    : left;
-    padding       : 12px 40px 0 40px;
 }
 
 .options-select {
     color             : #060710;
-    /* position       : absolute; */
     margin-top        : 10px;
     display           : flex;
     flex-direction    : column;
@@ -61,6 +63,10 @@
 
 .option:hover {
     cursor          : pointer;
+    background-color: #45C486;
+    color           : white;
+}
+.option-select{
     background-color: #45C486;
     color           : white;
 }
@@ -87,18 +93,25 @@
 .btn-next {
     width           : 335px;
     height          : 45px;
-    background-color: rgba(116, 116, 117, 0.5);
     color           : white;
     border          : 0;
     border-radius   : 8px;
+    background-color: #45C486 ;
 }
 
 .btn-reset {
     background-color: #45C486 !important;
 }
 
+.disabled {
+    background-color: rgba(116, 116, 117, 0.5);
+}
+
+.disabled:hover {
+    cursor: no-drop !important;
+}
+
+
 .btn-next:hover {
     cursor             : pointer;
-    /* ponerlo cuando seleccione uno, sino que no se active */
-    /* background-color: rgba(49, 205, 99, 1); */
 }
