@@ -10,6 +10,7 @@ var apiRouter = require('./routes/list');
 const mongoose = require('mongoose')
 var app = express();
 require('dotenv').config()
+const cors = require('cors')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,6 +41,12 @@ mongoose.connect(process.env.DB_MONGO, {
 app.use(function (req, res, next) {
   next(createError(404));
 });
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', "*");
+  res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
 
 // error handler
 app.use(function (err, req, res, next) {
